@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="container-fluid">
+        <h1 class="text-center alert alert-danger">Project ni Panot</h1>
+        <div style="display: flex; justify-content: center; align-items: center; height: 75vh;">
+            <div style="text-align:center">
+                <form method="post" action="/adding">
+                    <label>Enter Name</label>
+                    <input class="form-control" type="text" name="name" placeholder="Your name here" required></input>
+    
+                    <label>Enter Email</label>
+                    <input class="form-control" type="text" name="email" placeholder="example@email.com" required="required"></input>
+    
+                    <label>Enter Phone</label>
+                    <input class="form-control" type="text" name="phone" placeholder="09*********" maxlength="11" minlength="11" required></input>
+                    <br>
+                    <button style="align-content: right;" class="btn btn-primary pull right" data-toggle="modal" data-target="#myModal" type="submit" name="add">Add</button>
+                    <button style="align-content: right;" class="btn btn-primary pull right" data-toggle="modal" data-target="#myModal" type="button" name="back" onclick="window.location.href='{{ url_for('index') }}'">Back</button>
+                </form>
+            </div>
+            
+            <br>
+            
+        </div>
+    </div>
+    
+
+{% endblock %}
